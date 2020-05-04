@@ -14,10 +14,6 @@ from collections import defaultdict
 import matplotlib.pyplot as plt;
 
 
-from sklearn.decomposition import PCA as sklearnPCA
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
-from sklearn.datasets.samples_generator import make_blobs
-
 #from pandas.tools.plotting import parallel_coordinates
 
 
@@ -26,9 +22,9 @@ from sklearn.datasets.samples_generator import make_blobs
 N=10 #is the total number of nodes 
 L=5 #length of the walk
 class node_to_vector():
-    w= 3           # context window +- center node
-    s= 10                   # dimensions of node embeddings, also refer to size of hidden layer
-    n=10              # number of training epochs
+    w= 3
+    s= 10
+    n=10
     l=0.01 
     
     
@@ -63,7 +59,7 @@ class node_to_vector():
         print(self.node_index)
         training_data = []
 
-        # Cycle through each sentence in corpus
+        
         for chain in Graph_1:
             chain_len = len(chain)
             for i, node in enumerate(chain):
