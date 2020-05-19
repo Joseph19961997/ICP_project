@@ -110,7 +110,7 @@ class node_to_vector():
             #plt.plot(i, self.loss)
             #plt.show()
     
-    def forward_prop(self, x): #took the forward prop function online
+    def forward_prop(self, x): 
     
         h = np.dot(x, self.w1)
         u = np.dot(h, self.w2)
@@ -125,7 +125,7 @@ class node_to_vector():
         return y_c, h, u
     
     
-    def backprop(self, e, h, x):  #took the back prop function online
+    def backprop(self, e, h, x): 
         
         dl_dw2 = np.outer(h, e)
         dl_dw1 = np.outer(x, np.dot(self.w2, e.T))
